@@ -1,56 +1,109 @@
-﻿# Arcanea Ecosystem â€” Agent Instructions
+# Arcanea Ecosystem — Master Agent Instructions & Engineering Governance
 
-Read `GROK.md` (for Grok Build), `CLAUDE.md` (if present) first. Deeper wins in subdirs.
+> *"Through the Gates we rise. With the Guardians we create."*  
+> **Status:** CANONICAL · **Estate SSOT:** `C:/Users/frank/starlight/repos` · **Standard:** 10 October 2026
 
-This is the registry + strategy repo for the Arcanea worlds, cinematic content, and ecosystem map.
+This is the supreme operational governance and strategy repository for the Arcanea Omniverse, cinematic content, world standards, and agent swarms.
 
-## Multi-Harness Parallel Work
-Many agents (Claude, Grok, Gemini, Codex, Cursor...) operate across starlight/repos in parallel.
-Git is the coordination layer:
-- One agent = one branch: `agent/<harness>/<scope>` (e.g. `agent/grok/cinematic-lint-pass`).
-- Before editing: `git branch --show-current`, check for `.agent/active-agents.md` if present.
-- Never edit a file another live agent is actively rewriting.
-- For video comps under `videos/`: prefer scoped branches or worktrees.
+---
 
-## Video Compositions (HyperFrames)
-See `videos/arcanea-cinematic-hero/` for the canonical example.
-- Every change to `index.html` (or compositions/): run the full check from inside the video dir:
-  `npm run check` (lint + validate + inspect)
-- Fix all errors. Review warnings.
-- Duplicated GSAP timeline calls (multiple `tl.to` / `tl.fromTo` on same selector at nearly identical times) are forbidden â€” they are the classic symptom of missed project hooks / instructions. The .grok/hooks and subdir CLAUDE.md/AGENTS.md exist to prevent this.
-- Use the hyperframes, gsap, three skills (via your harness catalog) before authoring motion.
+## 1. The Prime Mandate: High Institutional Expectations
 
-**L1 Viral & Explainer Suite (Jun 2026):** `videos/arcanea-viral-content/` delivers the full L1 content engine (explainer + 5 viral shorts + plans, design, calendar, social copy, review, VO, assets). Best from visual/strategy/content/review agents + hyperframes. Top-notch state: Research-backed (2026 data + Arcanea strategy), brand-consistent, excellence applied (gates, no overwrites, isolated). See sub MASTER-README, CONTENT-PLAN, REVIEW, CALENDAR-COPY. Use for arcanea.ai front door (gasp, virality, education, conversion). Per-piece subdirs for independent work. Cross-ref main README + docs/L1-VISUAL-CANON-AND-CONTENT.md. Proactively synthesized for the unifying architecture (L1 undeniable).
+Every agent operating within the Arcanea estate—whether running under **Claude Code, Grok Build, Gemini/Antigravity, Codex, Hermes, Cursor, or OpenCode**—must adhere to the highest standard of engineering, craftsmanship, and aesthetic restraint:
 
-## World Registry
-- Edit `repos.json` and docs/ for structural changes.
-- Use the scripts/ for clone/sync/status.
-- When mapping worlds, run the mappers and respect SIP substrate.
+1. **Zero-Slop & Monolithic Elegance**:
+   - Banish all cartoon tropes, fantasy clutter, and pseudoscientific buzzwords.
+   - Ground the Ten Gates strictly in our **Cognitive & Architectural Taxonomy** (Foundation = Substrate, Fire = Velocity, Voice = Rhetoric, Crown = Executive Rigor).
+   - Enforce Swiss typographic hierarchy, dark obsidian surfaces, and 1px hairline micro-borders.
+2. **The Sovereign Gateway Law**:
+   - Typing `arcanea` launches the **Sovereign Creative Operating System & TUI Gateway** ([`arcanea-gateway.ps1`](file:///C:/Users/frank/Starlight-Intelligence-System/scripts/arcanea-gateway.ps1)).
+   - NEVER alias or hijack the brand command `arcanea` to a single AI coding harness. Coding sessions must be explicitly scoped (`arcanea agent hermes`, `agy-arc`, `claude-arcanea`).
+3. **The 8 October 2026 Quality Bar**:
+   - Never rush substantive work by skipping research, craft, refinement, or verification.
+   - Consequential changes require exact-revision independent review and a clear list of remaining gaps.
 
-## Excellence
-Always apply: repo-mastery (read rules + ecosystem map), gstack for any visual output, verification/santa gates before claiming done.
+---
 
-## Worlds & Agent Creation (2026+)
-The keystone is the Arcanea World Repo Standard (schemas/world.arcanea.schema.json + docs/WORLD_REPO_STANDARD.md).
-- Source of truth = the world repo (portable, ownable, content-addressed via @arcanea/world-sdk).
-- Coding harnesses (grok-arcanea, claude-arcanea, codex-arcanea, antigravity-arcanea, gemini...) are the creation engine + per-ecosystem marketplace distribution. Invest; delete none.
-- Use the SDK: genesis/scaffold (deterministic), harness adapter (manifest.agents[] driven writes), evolution (recordMemory in .arcanea/ â†’ distill â†’ evolveCharacter + public canonLevel-2 "earned" lore), proof, index.
-- Visual state for humans + agents: `node scripts/world-state.mjs <world-dir>` (or --json). Outputs ðŸŒ counts + ðŸŽ¬ harnesses + palette. Wire into ACOS statuslines and agent bars.
-- GitHub is central sovereign (user repo or OAuth-managed under their acct). App/PWA/mobile = complementary visual/consume layer only. No data landlord.
-- Branch discipline for world work: agent/grok/arcanea-world-xxx (or equivalent per harness). Never dirty the default branch.
-- Run mappers (world-to-higgsfield-game-mapper --world <path> [--write]) and world-state.mjs; respect memory/meaning pillars + 7 Pillars (world-build skill) for god-mode outputs (books central, games via Higgsfield, companions). Re-validate on example after changes.
+## 2. Multi-Harness Coordination & Git Discipline
 
-SIP: Built on SIP v1.1.1 (starlightintelligence.org/protocol). Grok .grok personal excellence seeds active where installed.
+Multiple AI harnesses operate concurrently across `starlight/repos`. Git is the sole coordination substrate:
+* **One Agent = One Branch**: Every harness must work on an isolated branch: `agent/<harness>/<scope>` (e.g., `agent/claude/router-edge-worker` or `agent/gemini/liquid-glass-zoom`).
+* **Pre-Flight Check**: Always run `git branch --show-current` before making changes. Never touch files that another active agent is actively rewriting.
+* **Worktree Isolation**: If a repository's primary checkout is locked on another harness's active branch (e.g., `agentic-ops-hub` on `agent/hermes/*`), use a dedicated worktree or staging document. Never dirty a sibling harness's branch.
+* **Commit Atomicity**: All commits must be granular, accompanied by high-signal commit messages following Conventional Commits (`feat(router): ...`, `fix(schema): ...`).
 
-## Design Taste Kernel
+---
 
-For any site, app, landing page, dashboard, visual identity, brand, motion, media, social, or frontend task, apply the shared Design Taste Kernel before handoff:
+## 3. The Adversarial "Santa Method" Convergence Gate
 
-- C:\Users\frank\starlight\repos\DESIGN_TASTE.md
-- C:\Users\frank\starlight\repos\WEB_EXPERIENCE_STANDARD.md
-- C:\Users\frank\starlight\repos\MOTION_TASTE_RUBRIC.md
-- C:\Users\frank\starlight\repos\MULTI_AGENT_DESIGN_COUNCIL.md
-- C:\Users\frank\starlight\repos\VISUAL_QA_GATE.md
+Complex architectural, design, or algorithmic changes must pass the two-agent **Santa Method** before shipping:
+1. **Fire Gate (Generation)**: An authoring agent (e.g., `arcanea-coder` or `arcanea-story`) drafts the implementation.
+2. **Crown Gate (Review)**: A second, independent reviewer agent (e.g., `arcanea-reviewer` or `Aiyami Executive Critic`) ruthlessly audits the implementation against `TASTE.md`, `CANON_LOCKED.md`, performance budgets, and security bounds.
+3. **Synthesis & Convergence**: Code is not marked done until both agents reach consensus with zero unaddressed critical gaps.
 
-When motion, scroll, generated media, GIF/video, or premium polish matters, route through the Motion Design Studio plugin/skills and verify the result visually.
+---
 
+## 4. Red Team & Blue Team Fundamentals
+
+Security, canon integrity, and regulatory compliance are continuous automated gates, not post-launch afterthoughts.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ ✦ ARCANEA RED / BLUE TEAM SECURITY TAXONOMY                                │
+├───────────────────────────────┬─────────────────────────────────────────────┤
+│ RED TEAM (Adversarial Probes) │ • Prompt Injection & Jailbreak Fuzzing      │
+│                               │ • Canon Drift & Lore Corruption Probes      │
+│                               │ • Secret Leakage & Key Exposure Exploits    │
+│                               │ • C2PA Metadata Stripping & Forgery Attacks │
+├───────────────────────────────┼─────────────────────────────────────────────┤
+│ BLUE TEAM (Defensive Shields) │ • Strict Schema Boundaries (Zod / JSON)     │
+│                               │ • Local-First Sovereign Privacy Shield      │
+│                               │ • Multi-Provider Model Failover & Rate Limiter│
+│                               │ • Automated C2PA Cryptographic Signatures   │
+└───────────────────────────────┴─────────────────────────────────────────────┘
+```
+
+* **Red Team Mandate**:
+  - Test all agent tool-calling interfaces against indirect prompt injection (e.g., malicious user input attempting to rewrite `CANON_LOCKED.md` or execute arbitrary shell scripts).
+  - Probe generative pipelines for hallucinated canon violations.
+  - Run automated pre-commit scans (`gitleaks`, `git-secrets`) to ensure no API keys or tokens are committed.
+* **Blue Team Mandate**:
+  - **Local-First Privacy Shield**: User manuscripts and private world repos must remain on the local disk. Cloud sync is strictly opt-in and client-side encrypted.
+  - **C2PA Provenance Compliance**: Every media export generated via Claw must be automatically stamped with C2PA cryptographic metadata to satisfy the **EU AI Act (2026)** limited-risk transparency requirements.
+  - **Failover Routing**: The Cloudflare Model Router (`api.arcanea.ai`) must maintain automatic provider failover (Anthropic → Vertex AI → DeepSeek → Groq) to prevent downtime.
+
+---
+
+## 5. Technology Standards & Decision Rationale
+
+| Layer | Standard Selection | Why Chosen Over Alternatives |
+|---|---|---|
+| **Edge API Plane** | **Cloudflare Workers + AI Gateway + Durable Objects** | Sub-30ms global routing, native prompt caching, zero-egress R2 media storage, stateful CRDT multiplayer rooms. Beats high AWS egress fees. |
+| **Interactive Web** | **Vercel + Next.js 15 + Turbopack + AI SDK 5.x** | Sub-10ms TTFB, React 19 Server Components, standardized streaming responses across all clients. |
+| **Desktop Shell** | **Tauri 2.0 (Rust backend + Webview2)** | 35MB RAM footprint (vs 900MB Electron), native NVMe file-system mapping, zero cold boot latency. |
+| **Typesetting & Books** | **Typst (Rust typesetting engine)** | Compiles markdown manuscripts to publication-grade, typography-perfect collector hardcovers in sub-seconds. Replaces fragile LaTeX. |
+| **3D & World Pipeline** | **OpenUSD (`.usda`) + WebGPU Gaussian Splats** | Pixar/NVIDIA standard compatible across Unreal Engine 5, Blender, and browser WebGPU at 60 FPS. |
+| **Generative Nodes** | **React Flow / SvelteFlow + Headless ComfyUI** | Combines the infinite spatial canvas of ComfyUI with the monolithic luxury UI of Linear and Teenage Engineering. |
+
+---
+
+## 6. The Engineering Documentation Suite
+
+All agents must align their work with the comprehensive engineering specifications:
+* **Product Requirements Document (PRD)**: [`docs/PRD-ARCANEA-SOVEREIGN-OMNIVERSE.md`](docs/PRD-ARCANEA-SOVEREIGN-OMNIVERSE.md)
+* **Architecture Requirements Document (ARD)**: [`docs/ARD-ARCANEA-SOVEREIGN-ARCHITECTURE.md`](docs/ARD-ARCANEA-SOVEREIGN-ARCHITECTURE.md)
+* **Software Development Life Cycle & GitHub Board**: [`docs/SDLC-AND-GITHUB-BOARD.md`](docs/SDLC-AND-GITHUB-BOARD.md)
+* **Red / Blue Team Security Framework**: [`docs/SECURITY-RED-BLUE-TEAM-FRAMEWORK.md`](docs/SECURITY-RED-BLUE-TEAM-FRAMEWORK.md)
+* **World Repo Standard**: [`docs/WORLD_REPO_STANDARD.md`](docs/WORLD_REPO_STANDARD.md)
+* **Session Ledger & Handover**: [`docs/SESSION-ARCANEA-SOVEREIGN-ECOSYSTEM-2026-10-10.md`](docs/SESSION-ARCANEA-SOVEREIGN-ECOSYSTEM-2026-10-10.md)
+
+---
+
+## 7. Definition of Done (DoD)
+
+Before any task or branch is marked complete:
+1. **Lint & Typecheck**: Zero TypeScript or lint errors (`pnpm type-check`, `pnpm lint`).
+2. **Canon Alignment**: 100% verified compliance with `CANON_LOCKED.md`.
+3. **Performance Budget**: Sub-50ms local TUI/CLI execution; sub-100ms API response time.
+4. **Adversarial Pass**: Independent Santa Method review passed with zero critical gaps.
+5. **Git Cleanliness**: Branch is rebased against `main`, commit messages follow conventional format, and temporary scratch files are purged.

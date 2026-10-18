@@ -36,6 +36,10 @@ console.log("")
 
 for (const [group, repos] of Object.entries(data.repositories)) {
   for (const repo of repos) {
+    if (!repo.path) {
+      console.log(`${fmt(group, 18)} ${fmt(repo.name, 28)} [remote-only]`)
+      continue
+    }
     const repoPath = path.resolve(ecosystemDir, repo.path)
     if (!repoExists(repoPath)) {
       console.log(`${fmt(group, 18)} ${fmt(repo.name, 28)} [missing] ${repo.path}`)
