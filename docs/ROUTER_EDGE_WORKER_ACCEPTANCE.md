@@ -87,6 +87,15 @@ obtained) or `VERIFIED` (evidence attached at a pinned revision). No other
 value is used, because "probably fine" is how acceptance records become
 fiction.
 
+The authoritative machine-readable form of this matrix is
+[`router-edge-worker-acceptance.json`](./router-edge-worker-acceptance.json).
+`scripts/router-acceptance.mjs` validates it, and CI runs that validator plus
+its tests. The validator rejects a `VERIFIED` row unless it carries evidence
+pinned to a 40-character commit SHA, rejects a ledger that drops a required
+criterion, and keeps rows 9 and 12 blocked until the commercial determination
+in §4.3 is recorded. The table below is a human rendering of the ledger; when
+the two disagree, the ledger is authoritative.
+
 | # | Criterion (from issue #6) | Evidence that would satisfy it | Status | Blocker |
 | --- | --- | --- | --- | --- |
 | 1 | Account model catalog | Published catalog file + a test asserting each entry resolves to a live adapter | UNVERIFIED | Source unpublished |
@@ -190,7 +199,16 @@ grep -rn "POLAR_" packages/router/src | grep -v test
 grep -rn "sandbox" packages/router/src | head
 ```
 
-Then fill the matrix in §3 with, per row, the command run, its output, and the
+Then record the evidence at that SHA in `docs/router-edge-worker-acceptance.json`
+and run the gate:
+
+```bash
+# 5. Validate the record, then require a pass before any release or money step.
+node scripts/router-acceptance.mjs docs/router-edge-worker-acceptance.json
+node scripts/router-acceptance.mjs docs/router-edge-worker-acceptance.json --require-pass
+```
+
+Fill the matrix in §3 with, per row, the command run, its output, and the
 SHA. Rows 9 and 12 stay open until §4.3 is settled commercially.
 
 Two things this procedure deliberately does not do: deploy, and enable billing.
