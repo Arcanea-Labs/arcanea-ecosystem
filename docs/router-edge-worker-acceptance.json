@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "issue": "frankxai/arcanea-ecosystem#6",
+  "title": "epic/router-edge-worker: verify Hono routing and Polar token metering",
+  "subject": {
+    "repository": "frankxai/arcanea-orchestrator",
+    "packagePath": "packages/router",
+    "claimedBranch": "agent/codex/sovereign-router-20261010",
+    "claimedCommit": "1851d7f"
+  },
+  "pinnedRevision": null,
+  "recordedAt": "2026-10-20",
+  "commercialDetermination": {
+    "recorded": false,
+    "note": "Polar's acceptable-use policy restricts marketplaces that sell others' goods or services for a revenue share and subjects AI generation tooling to closer review. Polar is a candidate for Arcanea-owned SaaS metering, not evidence of marketplace royalty settlement. Criteria paid-entitlements and polar-sandbox-e2e remain unverified until a marketplace-capable rail plus seller, rights and refund responsibilities are recorded."
+  },
+  "criteria": [
+    {
+      "id": "model-catalog",
+      "title": "Account model catalog",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no catalog file exists at a reachable revision.",
+      "evidence": []
+    },
+    {
+      "id": "anthropic-adapter",
+      "title": "Live Anthropic adapter",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no live request can be recorded without a funded Anthropic credential.",
+      "evidence": []
+    },
+    {
+      "id": "vertex-oauth",
+      "title": "Native Vertex OAuth",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no Vertex service-account or workload-identity path can be exercised.",
+      "evidence": []
+    },
+    {
+      "id": "deepseek-adapter",
+      "title": "DeepSeek adapter",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no live or error-path call can be recorded.",
+      "evidence": []
+    },
+    {
+      "id": "groq-adapter",
+      "title": "Groq adapter",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no live or error-path call can be recorded.",
+      "evidence": []
+    },
+    {
+      "id": "streaming",
+      "title": "Streaming",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no streaming test exists at a reachable revision.",
+      "evidence": []
+    },
+    {
+      "id": "semantic-classifier-eval",
+      "title": "Labelled semantic-classifier evaluation",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no labelled evaluation set exists in this repository.",
+      "evidence": []
+    },
+    {
+      "id": "canon-version-cache",
+      "title": "Consented canon / version-isolated caching",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no cache implementation or cross-version test exists.",
+      "evidence": []
+    },
+    {
+      "id": "paid-entitlements",
+      "title": "Paid entitlements",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; marketplace-capable commercial determination is not recorded.",
+      "evidence": []
+    },
+    {
+      "id": "unknown-usage-reconciliation",
+      "title": "Unknown-usage reconciliation",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no unknown-usage reconciliation test exists.",
+      "evidence": []
+    },
+    {
+      "id": "receipt-retention",
+      "title": "Receipt retention",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no Durable Object eviction/restart test exists.",
+      "evidence": []
+    },
+    {
+      "id": "polar-sandbox-e2e",
+      "title": "Polar sandbox end to end",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; sandbox outbox replay cannot be run.",
+      "evidence": []
+    },
+    {
+      "id": "routing-overhead",
+      "title": "Routing overhead",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no benchmark harness or machine record exists.",
+      "evidence": []
+    },
+    {
+      "id": "ttft",
+      "title": "Time to first token",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no end-to-end TTFT measurement exists.",
+      "evidence": []
+    },
+    {
+      "id": "accepted-artifact-cost",
+      "title": "Accepted-artifact cost",
+      "status": "UNVERIFIED",
+      "blocker": "Source unpublished; no accepted-artifact cost accounting exists.",
+      "evidence": []
+    },
+    {
+      "id": "independent-review",
+      "title": "Exact-revision independent review",
+      "status": "UNVERIFIED",
+      "blocker": "No pinned SHA exists for an independent reviewer to review.",
+      "evidence": []
+    }
+  ]
+}

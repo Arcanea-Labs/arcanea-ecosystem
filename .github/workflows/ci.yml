@@ -41,3 +41,18 @@ jobs:
           find . -path ./node_modules -prune -o -name '*.json' -print | while read -r f; do
             node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$f" || { echo "INVALID JSON: $f"; exit 1; }
           done
+
+  acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      # The ledger is the release gate for issue #6. It must stay well-formed
+      # even while every row is blocked, and its validator must keep failing
+      # closed on unsupported VERIFIED claims.
+      - name: Router acceptance ledger is well-formed
+        run: node scripts/router-acceptance.mjs docs/router-edge-worker-acceptance.json
+      - name: Router acceptance gate tests
+        run: node --test scripts/router-acceptance.test.mjs
